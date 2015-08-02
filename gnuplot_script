@@ -1,0 +1,26 @@
+set encoding iso_8859_1
+set key right
+set grid
+set xdata time
+set timefmt "%Y/%m/%d/ %H-%M"
+set xtics rotate by 45 right
+set format x "%d/%m/%Y %H:%M"
+set xlabel "Heures"
+set ylabel "Nombre d'erreurs"
+set style line 1 lw 1
+
+set title "FEC"
+set output "courbe-FEC.png"
+set terminal png size 1024,768 enhanced font "Verdana,10"
+plot "FEC.txt" using 1:($4) title "FEC Descendant" with lines, \
+     "FEC.txt" using 1:($5) title "FEC Montant" with lines
+
+set title "HEC"
+set output "courbe-HEC.png"
+plot "HEC.txt" using 1:($4) title "HEC Descendant" with lines, \
+     "HEC.txt" using 1:($5) title "CRC Montant" with lines
+
+set title "CRC"
+set output "courbe-CRC.png"
+plot "CRC.txt" using 1:($4) title "CRC Descendant" with lines, \
+     "CRC.txt" using 1:($5) title "CRC Montant" with lines
