@@ -18,7 +18,7 @@ plot "FEC.txt" using 1:($4) title "FEC Descendant" with lines, \
 set title "HEC"
 set output "courbe-HEC.png"
 plot "HEC.txt" using 1:($4) title "HEC Descendant" with lines, \
-     "HEC.txt" using 1:($5) title "CRC Montant" with lines
+     "HEC.txt" using 1:($5) title "HEC Montant" with lines
 
 set title "CRC"
 set output "courbe-CRC.png"
