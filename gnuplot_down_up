@@ -12,5 +12,5 @@ set style line 1 lw 1
 set title "Débit à la reconnexion"
 set output "courbe-down-up.png"
 set terminal png size 1024,768 enhanced font "Verdana,10"
-plot "deco_reco_download.txt" using 1:($3) title "Débit Descendant" with impulses, \
-     "deco_reco_upload.txt" using 1:($3) title "Débit Montant" with impulses
+plot "deco_reco_download.txt" using 1:($3) title "Débit Descendant" with histeps, \
+     "deco_reco_upload.txt" using 1:($3) title "Débit Montant" with histeps
