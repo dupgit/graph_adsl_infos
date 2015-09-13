@@ -39,4 +39,4 @@ for t in FEC HEC CRC; do
 done;
 
 # Sending the final mail
-mutt -F ~/.mutt/muttrc.olivier.delhomme@free.fr -s "Images du $mydate" -a $dest/$filedate-FEC.png $dest/$filedate-HEC.png $dest/$filedate-CRC.png -- olivier.delhomme@free.fr aurelie.deraisme@gmail.com < message
+mutt -F ~/.mutt/muttrc.mymail@free.fr -s "Images du $mydate" -a $dest/$filedate-FEC.png $dest/$filedate-HEC.png $dest/$filedate-CRC.png -- mymail@free.fr myother@gmail.com < message
